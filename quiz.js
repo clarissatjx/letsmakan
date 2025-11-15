@@ -7,7 +7,7 @@ function getDishImagePath(dishName) {
         'Rojak': 'img/rojak.png',
         'Laksa': 'img/laksa.png',
         'Ice Kacang': 'img/ice_kacang.png',
-        'Chicken Rice': 'img/chicken_rice.PNG',
+        'Chicken Rice': 'img/chicken_rice.png',
         'Satay': 'img/satay.png',
         'Char Kway Teow': 'img/char_kway_teow.png',
         'Bak Chor Mee': 'img/bak_chor_mee.png', 
