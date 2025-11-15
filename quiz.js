@@ -313,6 +313,28 @@ const storyQuestions = [
         ]
     },
     {
+        story: "You and your friends finally got all your food. You’re balancing your tray, scanning for seats. The hawker centre is extremely crowded and there aren't any empty tables that you can see. One couple clearly finishing but taking their own sweet time.",
+        question: "What you do first?",
+        options: [
+            { 
+                text: "Stand nearby and hover, hopefully they get the hint", 
+                personality: ['ISTJ', 'ESTJ', 'ENTJ', 'ISTP'] 
+            },
+            { 
+                text: "Ask politely if they’re leaving soon.", 
+                personality: ['ENFJ', 'ESFJ', 'ENFP', 'ESFP'] 
+            },
+            { 
+                text: "Just find another spot, no need to stress, confirm have one.", 
+                personality: ['INFP', 'ISFP', 'INFJ', 'INTP'] 
+            },
+            { 
+                text: "Let’s strategise — we split up and find seats.", 
+                personality: ['ENTP', 'ESTP', 'INTJ', 'ISFJ'] 
+            }
+        ]
+    },    
+    {
         story: "You finally sit down with your food. Your friends wants to try a bite before you even start.",
         question: "How you react?",
         options: [
