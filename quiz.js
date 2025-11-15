@@ -491,7 +491,7 @@ function selectOption(personalityTypes) {
 
 function determinePersonality() {
     // Determine primary personality
-    const iOrE = scores['I'] > scores['E'] ? 'I' : 'E';
+    const iOrE = scores['E'] > scores['I'] ? 'E' : 'I';
     const nOrS = scores['N'] > scores['S'] ? 'N' : 'S';
     const fOrT = scores['F'] > scores['T'] ? 'F' : 'T';
     const jOrP = scores['J'] > scores['P'] ? 'J' : 'P';
