@@ -209,7 +209,7 @@ const storyQuestions = [
         question: "What's your game plan?",
         options: [
             { 
-                text: "Check Google Maps, plan bus route, calculate what time must leave house", 
+                text: "Check Google Maps, plan bus route, calculate what time must leave house, don't wanna be late", 
                 personality: ['ISTJ', 'ESTJ', 'INTJ', 'ENTJ'] 
             },            
             {
@@ -417,7 +417,6 @@ const startScreen = document.getElementById('start-screen');
 const quizScreen = document.getElementById('quiz-screen');
 const resultsScreen = document.getElementById('results-screen');
 const startBtn = document.getElementById('start-btn');
-const restartBtn = document.getElementById('restart-btn');
 const questionText = document.getElementById('question-text');
 const storyText = document.getElementById('story-text');
 const optionsContainer = document.getElementById('options-container');
@@ -425,7 +424,6 @@ const progressFill = document.getElementById('progress');
 const resultContent = document.getElementById('result-content');
 
 startBtn.addEventListener('click', startQuiz);
-restartBtn.addEventListener('click', restartQuiz);
 
 
 
@@ -549,6 +547,10 @@ function renderResults(dish) {
             <div class="share-section">
                 <p>Share your result with friends!</p>
             </div>
+            <div class="results-buttons">
+                <button id="view-all-dishes-btn" class="btn-secondary">View All Dishes</button>
+                <button id="restart-btn-inline" class="btn-primary">Start Over</button>
+            </div>
         </div>
     `;
     
@@ -568,6 +570,20 @@ function renderResults(dish) {
             compContainer.appendChild(compImg);
         }
     });
+    
+    // Add event listener for view all dishes button
+    const viewAllBtn = document.getElementById('view-all-dishes-btn');
+    if (viewAllBtn) {
+        viewAllBtn.addEventListener('click', () => {
+            window.open('dishes.html', '_blank');
+        });
+    }
+    
+    // Add event listener for inline restart button
+    const restartBtnInline = document.getElementById('restart-btn-inline');
+    if (restartBtnInline) {
+        restartBtnInline.addEventListener('click', restartQuiz);
+    }
 }
 
 function restartQuiz() {

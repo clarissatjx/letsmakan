@@ -107,6 +107,47 @@ h1 {
   box-shadow: 0 0 0 #333;
 }
 
+.btn-secondary {
+  background: #a8e6cf;
+  color: #333;
+  border: 3px solid #333;
+  padding: 12px 30px;
+  font-size: 1.1em;
+  border-radius: 0;
+  cursor: pointer;
+  transition: transform 0.1s;
+  font-weight: 600;
+  font-family: "Pixelify Sans", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 4px 4px 0 #333;
+}
+
+.btn-secondary:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 #333;
+}
+
+.btn-secondary:active {
+  transform: translate(4px, 4px);
+  box-shadow: 0 0 0 #333;
+}
+
+.results-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 25px;
+  flex-wrap: wrap;
+}
+
+.results-buttons .btn-primary,
+.results-buttons .btn-secondary {
+  flex: 1;
+  min-width: 140px;
+  max-width: 200px;
+}
+
 /* Progress Bar */
 .progress-bar {
   width: 100%;
@@ -462,5 +503,17 @@ h1 {
 
   #question-text {
     font-size: 1.2em;
+  }
+
+  .results-buttons {
+    gap: 8px;
+    margin-top: 20px;
+  }
+
+  .results-buttons .btn-primary,
+  .results-buttons .btn-secondary {
+    min-width: 120px;
+    font-size: 1em;
+    padding: 10px 20px;
   }
 }
