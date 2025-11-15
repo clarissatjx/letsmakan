@@ -205,13 +205,57 @@ const personalityDishes = {
 
 const storyQuestions = [
     {
-        story: "You and your friend step into a super crowded hawker centre. Wah, the smell...",
+        story: "You have a planned hang out with 2 of your friends later and decided to eat at a hawker centre first.",
+        question: "What's your game plan?",
+        options: [
+            { 
+                text: "Check Google Maps, plan bus route, calculate what time must leave house", 
+                personality: ['ISTJ', 'ESTJ', 'INTJ', 'ENTJ'] 
+            },            
+            {
+                text: "Later then see lah, just wing it. If I get lost, I'll call friend to rescue.", 
+                personality: ['ENFP', 'ESFP', 'ISFP', 'INFP']
+            },            
+            {
+                text: "Ask the group chat, make sure everyone knows how to go, suggest meeting at nearest MRT first.", 
+                personality: ['ESFJ', 'ENFJ', 'ISFJ', 'INFJ']
+            },            
+            {
+                text: "Check nearest bus stop/MRT station. I’ll just go to that MRT first and find the hawker centre on the way.",
+                personality: ['ENTP', 'ESTP', 'ISTP', 'INTP']
+            }            
+        ]
+    },
+    {
+        story: "Before leaving the house, you stand in front of your wardrobe. Outside weather? Hot. Humid. Confirm sweat. And hawker centre don't have aircon.",
+        question: "What you end up wearing?",
+        options: [
+            { 
+                text: "Simple and safe — comfy drifit tee + shorts.", 
+                personality: ['ISTJ', 'ISFJ', 'ISTP', 'INTJ'] 
+            },
+            { 
+                text: "Whatever feels good today — colours, patterns, vibes all must match my mood.", 
+                personality: ['ENFP', 'ESFP', 'INFP', 'ENFJ'] 
+            },
+            { 
+                text: "Practical but still look presentable — breathable top, clean fit, can take nice pics also.", 
+                personality: ['ENTJ', 'ESTJ', 'ESFJ', 'ENTP'] 
+            },
+            { 
+                text: "I just throw on whatever’s nearest to me and go. Not that deep lah.", 
+                personality: ['INTP', 'ISFP', 'ESTP', 'INFJ'] 
+            }
+        ]
+    },    
+    {
+        story: "You and your friends step into a super crowded hawker centre. Wah, the smell...",
         question: "What catches your eye first?",
         options: [
             { text: "Wah the queue damn long — must be quite legit.", personality: ['ISTJ', 'ISFJ', 'ESTJ', 'ESFJ'] },
             { text: "Eh what is that stall? never see before leh.", personality: ['ENFP', 'ENTP', 'ESTP', 'ISFP'] },
             { text: "Hold up, I need to scan all the stalls first before deciding.", personality: ['INTJ', 'INTP', 'ISTP', 'INFJ'] },
-            { text: "I see what my friend hype up first", personality: ['ENFJ', 'INFP', 'ESFP', 'ENTJ'] }
+            { text: "I see what my friends hype up first", personality: ['ENFJ', 'INFP', 'ESFP', 'ENTJ'] }
         ]
     },
     {
@@ -239,7 +283,7 @@ const storyQuestions = [
         options: [
             { text: "My usual, why risk disappointment?", personality: ['ISTJ', 'ISFJ', 'ESTJ', 'ESFJ', 'INTJ', 'INTP', 'ISTP', 'INFJ'] },
             { text: "Gotta try something new!", personality: ['ENFP', 'ENTP', 'ESTP', 'ISFP'] },
-            { text: "I get both and share-share with my friend.", personality: ['ENFJ', 'ESFP', 'INFP', 'ENTJ'] },
+            { text: "I get both and share-share with my friends.", personality: ['ENFJ', 'ESFP', 'INFP', 'ENTJ'] },
         ]
     },
     {
@@ -267,7 +311,29 @@ const storyQuestions = [
                 personality: ['INFJ', 'INTP', 'ISTP', 'ENFJ'] 
             }
         ]
-    },    
+    },
+    {
+        story: "You finally sit down with your food. Your friends wants to try a bite before you even start.",
+        question: "How you react?",
+        options: [
+            { 
+                text: "Take lah take! Sharing is caring.", 
+                personality: ['ENFJ', 'ENFP', 'ESFP', 'ENTP'] 
+            },
+            { 
+                text: "Takes a bite first before offering to your friend", 
+                personality: ['ISFJ', 'INFP', 'INFJ', 'ISFP'] 
+            },
+            { 
+                text: "Let's eat our own food first", 
+                personality: ['ISTJ', 'INTJ', 'ISTP', 'INTP'] 
+            },
+            { 
+                text: "Ok lah you try mine, I try yours also — fair trade.", 
+                personality: ['ESTP', 'ESTJ', 'ENTJ', 'ESFJ'] 
+            }
+        ]
+    },        
     {
         story: "At the next table, someone damn loud saying another stall is super good.",
         question: "What you think?",
