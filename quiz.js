@@ -205,165 +205,116 @@ const personalityDishes = {
 
 const storyQuestions = [
     {
-        story: "You're wandering through a hawker center with your friend and your stomach starts rumbling. So many options!",
+        story: "You and your friend step into a super crowded hawker centre. Wah, the smell...",
         question: "What catches your eye first?",
         options: [
-            { text: "The longest queue - must be good!", personality: ['ISTJ', 'ISFJ', 'ESTJ', 'ESFJ'] },
-            { text: "Something I've never seen before", personality: ['ENFP', 'ENTP', 'ESTP', 'ISFP'] },
-            { text: "I need to check out every stall first then evaluate...", personality: ['INTJ', 'INTP', 'ISTP', 'INFJ'] },
-            { text: "Whatever my friend is excited about!", personality: ['ENFJ', 'INFP', 'ESFP', 'ENTJ'] }
+            { text: "Wah the queue damn long — must be quite legit.", personality: ['ISTJ', 'ISFJ', 'ESTJ', 'ESFJ'] },
+            { text: "Eh what is that stall? never see before leh.", personality: ['ENFP', 'ENTP', 'ESTP', 'ISFP'] },
+            { text: "Hold up, I need to scan all the stalls first before deciding.", personality: ['INTJ', 'INTP', 'ISTP', 'INFJ'] },
+            { text: "I see what my friend hype up first", personality: ['ENFJ', 'INFP', 'ESFP', 'ENTJ'] }
         ]
     },
     {
-        story: "You spot a stall with a really interesting name. The sign says 'Auntie's Special' with a long line.",
-        question: "What's your move?",
+        story: "You notice a stall called “Auntie’s Secret Recipe”. The queue sibeh long.",
+        question: "What you do?",
         options: [
-            { text: "Join the queue - if there's a line, it's worth it!", personality: ['ESTP', 'ESFP', 'ENTP', 'ENFP'] },
-            { text: "Check reviews on my phone first", personality: ['INTJ', 'INTP', 'ISTJ', 'ISTP'] },
-            { text: "Ask someone in line if they've tried it before and what they think", personality: ['ENFJ', 'ESFJ', 'ENTJ', 'ESTJ'] },
-            { text: "Maybe later, I'll stick with what I know for now", personality: ['ISFJ', 'ISFP', 'INFJ', 'INFP'] }
+            { text: "Queue!!! Long queue = good food (basic singaporean math)", personality: ['ESTP', 'ESFP', 'ENTP', 'ENFP'] },
+            { text: "Gonna google to check the reviews first", personality: ['INTJ', 'INTP', 'ISTJ', 'ISTP'] },
+            { text: "Ask the uncle/aunty in front if nice or not.", personality: ['ENFJ', 'ESFJ', 'ENTJ', 'ESTJ'] },
+            { text: "Aiya skip lah. I not in the mood to queue.", personality: ['ISFJ', 'ISFP', 'INFJ', 'INFP'] }
         ]
     },
     {
-        story: "You notice the stall has been around for 30 years according to a sign. The hawker is an expert at their craft.",
+        story: "You see a sign saying the stall has been around for 30 years. Auntie inside flipping wok like masterchef.",
         question: "What impresses you most?",
         options: [
-            { text: "The dedication and skill built over decades", personality: ['ISTJ', 'ISFJ', 'ESTJ', 'ESFJ', 'INTJ', 'INFJ'] },
-            { text: "The passion and love for what they do", personality: ['ENFJ', 'ENFP', 'ESFP', 'INFP', 'ISFP', 'ENTJ'] },
-            { text: "The consistency - same quality every time", personality: ['ISTP', 'ESTP', 'INTP', 'ENTP'] }
+            { text: "The dedication. 30 years still going strong.", personality: ['ISTJ', 'ISFJ', 'ESTJ', 'ESFJ', 'INTJ', 'INFJ'] },
+            { text: "The passion… can feel the love she put inside the food.", personality: ['ENFJ', 'ENFP', 'ESFP', 'INFP', 'ISFP', 'ENTJ'] },
+            { text: "The consistency! every plate look exactly the same.", personality: ['ISTP', 'ESTP', 'INTP', 'ENTP'] }
         ]
     },
     {
-        story: "You're trying to decide between two dishes. One looks familiar, the other is completely new.",
-        question: "Which one do you pick?",
+        story: "You’re down to two choices — your usual favourite or something totally new.",
+        question: "Which one?",
         options: [
-            { text: "The familiar one - I know I'll like it", personality: ['ISTJ', 'ISFJ', 'ESTJ', 'ESFJ'] },
-            { text: "The new one - life's too short for the same dish!", personality: ['ENFP', 'ENTP', 'ESTP', 'ISFP'] },
-            { text: "I'll get both and share with my friend", personality: ['ENFJ', 'ESFP', 'INFP', 'ENTJ'] },
-            { text: "Let me think about the ingredients and flavors first and ask my friend for their opinion", personality: ['INTJ', 'INTP', 'ISTP', 'INFJ'] }
+            { text: "My usual, why risk disappointment?", personality: ['ISTJ', 'ISFJ', 'ESTJ', 'ESFJ', 'INTJ', 'INTP', 'ISTP', 'INFJ'] },
+            { text: "Gotta try something new!", personality: ['ENFP', 'ENTP', 'ESTP', 'ISFP'] },
+            { text: "I get both and share-share with my friend.", personality: ['ENFJ', 'ESFP', 'INFP', 'ENTJ'] },
         ]
     },
     {
-        story: "The hawker aunty at the stall you decided to order from is chatting with customers. She seems really friendly! She notices you and asks if you need any help ordering.",
-        question: "What do you do?",
+        story: "When you order, the hawker aunty smiles and asks, “First time here ah? Want recommendation?”",
+        question: "How you respond?",
         options: [
-            { text: "Strike up a conversation and ask for recommendations!", personality: ['ENFJ', 'ENFP', 'ESFJ', 'ESFP', 'ENTJ', 'ENTP', 'ESTJ', 'ESTP'] },
-            { text: "Smile politely and decline, I'll just order what I have in mind already~", personality: ['INFJ', 'INFP', 'INTJ', 'INTP', 'ISFJ', 'ISFP', 'ISTJ', 'ISTP'] }
+            { text: "Tell me what’s good!", personality: ['ENFJ', 'ENFP', 'ESFJ', 'ESFP', 'ESTP', 'ENTP', 'ENTJ', 'ESTJ'] },
+            { text: "Thank you aunty, but I already know what I want", personality: ['INFJ', 'INFP', 'INTJ', 'INTP', 'ISTJ', 'ISFJ', 'ISTP', 'ISFP'] }
         ]
     },
     {
-        story: "After ordering from the previous stall, you go to another hawker to order another dish. The hawker accidentally gives you the wrong order! You ordered something else, but this looks pretty good too.",
-        question: "What do you do?",
+        story: "Another stall gives you the wrong order… but it actually looks quite tasty leh.",
+        question: "Your move?",
         options: [
-            { text: "Just accept it and try it - might be good!", personality: ['ENFP', 'ESFP', 'ENTP', 'ESTP', 'ISFP', 'INFP'] },
-            { text: "Politely point out the mistake and ask for what I ordered", personality: ['ISTJ', 'ESTJ', 'INTJ', 'ENTJ', 'ISFJ', 'ESFJ'] },
-            { text: "Take it but feel a bit awkward about saying something", personality: ['INFJ', 'INTP', 'ISTP', 'ENFJ'] }
+            { 
+                text: "Just take it. Maybe nice also.", 
+                personality: ['ENFP', 'ESFP', 'ENTP', 'ESTP', 'ISFP', 'INFP'] 
+            },
+            { 
+                text: "Sorry aunty... I think this isn't my order :(", 
+                personality: ['ISTJ', 'ESTJ', 'INTJ', 'ENTJ', 'ISFJ', 'ESFJ'] 
+            },
+            { 
+                text: "I look around to find who this belongs to — maybe aunty mix up, I help settle.", 
+                personality: ['INFJ', 'INTP', 'ISTP', 'ENFJ'] 
+            }
+        ]
+    },    
+    {
+        story: "At the next table, someone damn loud saying another stall is super good.",
+        question: "What you think?",
+        options: [
+            { 
+                text: "Serious? I gotta check it out now", 
+                personality: ['ENFP', 'ESFP', 'ENTP', 'ESTP']
+            },
+            { 
+                text: "Interesting… but let me observe the stall first and search it up.", 
+                personality: ['INTJ', 'ENTJ', 'ISTJ', 'ESTJ', 'INTP', 'ISTP']
+            },
+            { 
+                text: "Maybe next time! (I'll probably forget about it)", 
+                personality: ['INFJ', 'INFP', 'ISFJ', 'ISFP', 'ENFJ', 'ESFJ']
+            }
         ]
     },
     {
-        story: "Your food arrives and you take a seat. It looks amazing. You take your first bite...",
-        question: "What's your reaction?",
+        story: "Your clique just entered the hawker centre and asks you join them. They all sharing food in the middle family-style.",
+        question: "What you do?",
         options: [
-            { text: "Immediately rave about how good it is!", personality: ['ENFJ', 'ENFP', 'ESFJ', 'ESFP', 'ENTJ', 'ENTP', 'ESTJ', 'ESTP'] },
-            { text: "Savor it and take a few more bites!", personality: ['INFJ', 'INFP', 'INTJ', 'INTP', 'ISFJ', 'ISFP', 'ISTJ', 'ISTP'] }
+            { text: "I'll help arrange plates!", personality: ['ENTJ', 'ESTJ', 'ENFJ', 'ESFJ'] },
+            { text: "Eh let’s order MORE!", personality: ['ENFP', 'ENTP', 'ESFP', 'ESTP'] },
+            { text: "I'll join but I'll eat my own dish~.", personality: ['INTJ', 'INTP', 'ISTJ', 'ISTP', 'INFJ', 'INFP', 'ISFJ', 'ISFP'] }
         ]
     },
     {
-        story: "You overhear someone raving about a dish at another stall. They're really passionate about it!",
-        question: "What do you think?",
+        story: "You’re full and happy. Hawker centre is still buzzing with life!",
+        question: "What next?",
         options: [
-            { text: "Ooh sounds good! Let me go check it out now", personality: ['ENFP', 'ESFP', 'ENTP', 'ESTP', 'ENFJ', 'ESFJ'] },
-            { text: "Interesting... I'll probably forget about it though", personality: ['ISTJ', 'ESTJ', 'INTJ', 'ENTJ', 'INTP', 'INFP', 'INFJ', 'ISFJ', 'ISFP', 'ISTP'] }
+            { text: "Dessert + stay chit-chat awhile.", personality: ['ENFJ', 'ENFP', 'ESFJ', 'ESFP', 'ENTP', 'ESTP'] },
+            { text: "Go home, I'm done for the day already", personality: ['INTJ', 'INTP', 'ISTJ', 'ISTP', 'INFJ', 'INFP', 'ISFJ', 'ISFP'] },
+            { text: "Chill awhile then go, no rush to leave", personality: ['ENTJ', 'ESTJ'] }
         ]
     },
     {
-        story: "You see someone struggling to find a table. The hawker center is packed!",
-        question: "What do you do?",
+        story: "Walking out, you think back about the whole makan session.",
+        question: "What you remember most?",
         options: [
-            { text: "Offer to share your table", personality: ['ENFJ', 'ESFJ', 'ENFP', 'ESFP', 'ISFJ', 'ISFP'] },
-            { text: "Keep eating and mind your own business", personality: ['INTJ', 'INTP', 'ISTJ', 'ISTP', 'ESTJ', 'ESTP'] },
-            { text: "Help them look for an empty table", personality: ['ENTJ', 'ENTP', 'INFJ', 'INFP'] }
-        ]
-    },
-    {
-        story: "The hawker center is closing soon. You still haven't tried everything you wanted to!",
-        question: "What's your priority?",
-        options: [
-            { text: "Rush to try the most popular stalls before closing", personality: ['ESTP', 'ESFP', 'ENTP', 'ENFP'] },
-            { text: "Take note of what to try next time", personality: ['INTJ', 'ISTJ', 'ESTJ', 'ENTJ', 'ISFJ', 'ESFJ', 'INTP', 'ISTP'] },
-            { text: "Just enjoy what you have and come back another day", personality: ['INFJ', 'INFP', 'ISFP', 'ENFJ'] }
-        ]
-    },
-    {
-        story: "You're planning to come back tomorrow. There are so many more stalls to try!",
-        question: "What's your approach?",
-        options: [
-            { text: "Make a list of must-try stalls before tomorrow", personality: ['INTJ', 'ISTJ', 'ESTJ', 'ENTJ', 'ISFJ', 'ESFJ', 'ENFJ', 'INFJ'] },
-            { text: "Just wing it and see what looks good", personality: ['INTP', 'ISTP', 'ESTP', 'ENTP', 'ISFP', 'ESFP', 'INFP', 'ENFP'] }
-        ]
-    },
-    {
-        story: "Before leaving, you notice the famous hawker stall at the corner is making a dish. The technique looks fascinating!",
-        question: "What interests you more?",
-        options: [
-            { text: "The skill and technique - how do they do that?", personality: ['INTJ', 'INTP', 'ENTJ', 'ENTP', 'INFJ', 'INFP', 'ENFJ', 'ENFP'] },
-            { text: "The final result - I just want to eat it!", personality: ['ISTJ', 'ISFJ', 'ESTJ', 'ESFJ', 'ISTP', 'ISFP', 'ESTP', 'ESFP'] }
-        ]
-    },
-    {
-        story: "The next day, you arrive at the hawker centre again. Coincidentally, your familiar clique is there too! They notice you and invite you to join their table. They're sharing different dishes family-style.",
-        question: "What do you do?",
-        options: [
-            { text: "Jump right in and help organize the sharing", personality: ['ENTJ', 'ESTJ', 'ENFJ', 'ESFJ'] },
-            { text: "Get excited and suggest trying even more dishes together", personality: ['ENFP', 'ENTP', 'ESFP', 'ESTP'] },
-            { text: "Join them but focus on your own dish you just ordered. A bit paiseh to join in the sharing.", personality: ['INTJ', 'INTP', 'ISTJ', 'ISTP', 'INFJ', 'INFP', 'ISFJ', 'ISFP'] }
-        ]
-    },
-    {
-        story: "Your friends wants to take a photo of the food for social media. You're all excited about the meal.",
-        question: "What's your approach?",
-        options: [
-            { text: "Help stage the perfect shot with good lighting", personality: ['ENFJ', 'ESFJ', 'ENFP', 'ESFP'] },
-            { text: "Quick snap and let's eat before it gets cold!", personality: ['ISTJ', 'ESTJ', 'ISTP', 'ESTP'] },
-            { text: "Let them take the photo, you'll just observe", personality: ['INTJ', 'INTP', 'INFJ', 'INFP', 'ISFJ', 'ISFP', 'ENTJ', 'ENTP'] }
-        ]
-    },
-    {
-        story: "Your friend at the table asks if you want to try a super spicy dish they've ordered. You're not sure if you can handle it...Looks so red!",
-        question: "How do you feel?",
-        options: [
-            { text: "Bring it on! I love a challenge", personality: ['ENTJ', 'ESTJ', 'ISTJ', 'ISTP', 'ESTP', 'INTJ', 'INTP', 'ENTP'] },
-            { text: "Hmm, maybe just a little bit to try, scared too spicy", personality: ['ENFJ', 'ESFJ', 'INFJ', 'ISFJ', 'ENFP', 'INFP', 'ESFP', 'ISFP'] }
-        ]
-    },
-    {
-        story: "After eating, you're feeling pretty full and satisfied. The hawker center is still buzzing with activity.",
-        question: "What sounds good right now?",
-        options: [
-            { text: "Stay longer! Chat with friends and maybe order a dessert!", personality: ['ENFJ', 'ENFP', 'ESFJ', 'ESFP', 'ENTP', 'ESTP'] },
-            { text: "Time to head home while the experience is still fresh in my mind", personality: ['INTJ', 'INTP', 'ISTJ', 'ISTP', 'INFJ', 'INFP', 'ISFJ', 'ISFP'] },
-            { text: "Stay a bit more to chat and digest before heading home", personality: ['ENTJ', 'ESTJ'] }
-        ]
-    },
-    {
-        story: "The bill comes and it's time to split. Everyone ordered different things at different prices.",
-        question: "How do you prefer to handle it?",
-        options: [
-            { text: "Calculate exactly who owes what", personality: ['ISTJ', 'ESTJ', 'INTJ', 'ENTJ', 'ISFJ', 'ESFJ'] },
-            { text: "Just split evenly - easier that way", personality: ['ENFP', 'ESFP', 'ENTP', 'ESTP', 'INFP', 'ISFP', 'INTP', 'ISTP'] },
-            { text: "I'll just pay for everyone, no big deal", personality: ['ENFJ', 'INFJ'] }
-        ]
-    },
-    {
-        story: "You're leaving the hawker center, full and happy. The experience was memorable!",
-        question: "What will you remember most?",
-        options: [
-            { text: "The amazing food and flavors", personality: ['ISTJ', 'ISFJ', 'ESTJ', 'ESFJ', 'ISTP', 'ISFP'] },
-            { text: "The conversations and connections made", personality: ['ENFJ', 'ENFP', 'ESFP', 'INFJ', 'INFP', 'ENTJ'] },
-            { text: "The whole experience - food, atmosphere, everything", personality: ['ENTP', 'ESTP', 'INTJ', 'INTP'] }
+            { text: "The food — the flavours are on point.", personality: ['ISTJ', 'ISFJ', 'ESTJ', 'ESFJ', 'ISTP', 'ISFP'] },
+            { text: "The people — the banter, the vibes, the yapping!", personality: ['ENFJ', 'ENFP', 'ESFP', 'INFJ', 'INFP', 'ENTJ'] },
+            { text: "Everything — the chaos, the smell, the whole experience.", personality: ['ENTP', 'ESTP', 'INTJ', 'INTP'] }
         ]
     }
 ];
+
 
 // Quiz state
 let currentQuestion = 0;
