@@ -430,7 +430,11 @@ startBtn.addEventListener('click', startQuiz);
 function startQuiz() {
     // Clear saved results when starting a new quiz
     localStorage.removeItem('letsmakan_result');
+    localStorage.removeItem('letsmakan_alternative');
     localStorage.removeItem('letsmakan_timestamp');
+    
+    currentDish = null;
+    alternativeDish = null;
     
     startScreen.classList.remove('active');
     quizScreen.classList.add('active');
@@ -531,6 +535,7 @@ function showResults() {
 
     // Save result to localStorage
     localStorage.setItem('letsmakan_result', result.primary);
+    localStorage.setItem('letsmakan_alternative', result.alternative || '');
     localStorage.setItem('letsmakan_timestamp', Date.now().toString());
 
     renderResults(currentDish, alternativeDish);
@@ -542,6 +547,22 @@ function toggleAlternativeDish() {
         const temp = currentDish;
         currentDish = alternativeDish;
         alternativeDish = temp;
+        
+        // Update localStorage to reflect the swap
+        const currentPersonality = Object.keys(personalityDishes).find(
+            key => personalityDishes[key].name === currentDish.name
+        );
+        const alternativePersonality = Object.keys(personalityDishes).find(
+            key => personalityDishes[key].name === alternativeDish.name
+        );
+        
+        if (currentPersonality) {
+            localStorage.setItem('letsmakan_result', currentPersonality);
+        }
+        if (alternativePersonality) {
+            localStorage.setItem('letsmakan_alternative', alternativePersonality);
+        }
+        
         renderResults(currentDish, alternativeDish);
     }
 }
@@ -640,7 +661,11 @@ function renderResults(dish, alternativeDish = null) {
 function restartQuiz() {
     // Clear saved results when restarting
     localStorage.removeItem('letsmakan_result');
+    localStorage.removeItem('letsmakan_alternative');
     localStorage.removeItem('letsmakan_timestamp');
+    
+    currentDish = null;
+    alternativeDish = null;
     
     resultsScreen.classList.remove('active');
     startScreen.classList.add('active');
@@ -649,12 +674,18 @@ function restartQuiz() {
 // Check for saved results on page load
 function checkForSavedResults() {
     const savedPersonality = localStorage.getItem('letsmakan_result');
+    const savedAlternative = localStorage.getItem('letsmakan_alternative');
+    
     if (savedPersonality && personalityDishes[savedPersonality]) {
-        const dish = personalityDishes[savedPersonality];
+        currentDish = personalityDishes[savedPersonality];
+        alternativeDish = savedAlternative && personalityDishes[savedAlternative] 
+            ? personalityDishes[savedAlternative] 
+            : null;
+        
         startScreen.classList.remove('active');
         quizScreen.classList.remove('active');
         resultsScreen.classList.add('active');
-        renderResults(dish, null); // No alternative shown for saved results
+        renderResults(currentDish, alternativeDish);
     }
 }
 
