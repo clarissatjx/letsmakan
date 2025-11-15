@@ -486,36 +486,79 @@ function selectOption(personalityTypes) {
 }
 
 function determinePersonality() {
-    const personality = 
-        (scores['I'] > scores['E'] ? 'I' : 'E') +
-        (scores['N'] > scores['S'] ? 'N' : 'S') +
-        (scores['F'] > scores['T'] ? 'F' : 'T') +
-        (scores['J'] > scores['P'] ? 'J' : 'P');
+    // Determine primary personality
+    const iOrE = scores['I'] > scores['E'] ? 'I' : 'E';
+    const nOrS = scores['N'] > scores['S'] ? 'N' : 'S';
+    const fOrT = scores['F'] > scores['T'] ? 'F' : 'T';
+    const jOrP = scores['J'] > scores['P'] ? 'J' : 'P';
     
-    return personality;
+    const personality = iOrE + nOrS + fOrT + jOrP;
+    
+    // Check for ties and determine alternative
+    let alternativePersonality = null;
+    
+    if (scores['I'] === scores['E']) {
+        // Tie on I/E dimension
+        alternativePersonality = (iOrE === 'I' ? 'E' : 'I') + nOrS + fOrT + jOrP;
+    } else if (scores['N'] === scores['S']) {
+        // Tie on N/S dimension
+        alternativePersonality = iOrE + (nOrS === 'N' ? 'S' : 'N') + fOrT + jOrP;
+    } else if (scores['F'] === scores['T']) {
+        // Tie on F/T dimension
+        alternativePersonality = iOrE + nOrS + (fOrT === 'F' ? 'T' : 'F') + jOrP;
+    } else if (scores['J'] === scores['P']) {
+        // Tie on J/P dimension
+        alternativePersonality = iOrE + nOrS + fOrT + (jOrP === 'J' ? 'P' : 'J');
+    }
+    
+    return {
+        primary: personality,
+        alternative: alternativePersonality
+    };
 }
+
+// Store current dish state for toggling
+let currentDish = null;
+let alternativeDish = null;
 
 function showResults() {
     quizScreen.classList.remove('active');
     resultsScreen.classList.add('active');
 
-    const personality = determinePersonality();
-    const dish = personalityDishes[personality];
+    const result = determinePersonality();
+    currentDish = personalityDishes[result.primary];
+    alternativeDish = result.alternative ? personalityDishes[result.alternative] : null;
 
     // Save result to localStorage
-    localStorage.setItem('letsmakan_result', personality);
+    localStorage.setItem('letsmakan_result', result.primary);
     localStorage.setItem('letsmakan_timestamp', Date.now().toString());
 
-    renderResults(dish);
+    renderResults(currentDish, alternativeDish);
 }
 
-function renderResults(dish) {
+function toggleAlternativeDish() {
+    if (alternativeDish) {
+        // Swap dishes
+        const temp = currentDish;
+        currentDish = alternativeDish;
+        alternativeDish = temp;
+        renderResults(currentDish, alternativeDish);
+    }
+}
+
+function renderResults(dish, alternativeDish = null) {
     resultContent.innerHTML = `
         <div class="result-card">
             <div class="dish-illustration-container" id="main-dish-illustration"></div>
             <h2>You are ${dish.name}!</h2>
             <p class="tagline">${dish.tagline}</p>
             <p class="dish-description">${dish.description}</p>
+            
+            ${alternativeDish ? `
+            <button id="toggle-alternative-btn" class="btn-alternative">
+                🤔 You may also be: ${alternativeDish.name}
+            </button>
+            ` : ''}
             
             <div class="strengths-weaknesses">
                 <div class="strengths">
@@ -561,6 +604,14 @@ function renderResults(dish) {
         mainContainer.appendChild(img);
     }
     
+    // Add event listener for toggle alternative button
+    if (alternativeDish) {
+        const toggleBtn = document.getElementById('toggle-alternative-btn');
+        if (toggleBtn) {
+            toggleBtn.addEventListener('click', toggleAlternativeDish);
+        }
+    }
+    
     // Add compatible dish illustrations
     dish.compatible.forEach((comp, index) => {
         const compContainer = document.querySelector(`#compatible-${index} .compatible-illustration`);
@@ -603,7 +654,7 @@ function checkForSavedResults() {
         startScreen.classList.remove('active');
         quizScreen.classList.remove('active');
         resultsScreen.classList.add('active');
-        renderResults(dish);
+        renderResults(dish, null); // No alternative shown for saved results
     }
 }
 

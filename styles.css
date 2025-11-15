@@ -144,8 +144,10 @@ h1 {
 .results-buttons .btn-primary,
 .results-buttons .btn-secondary {
   flex: 1;
-  min-width: 140px;
-  max-width: 200px;
+  min-width: 120px;
+  max-width: 160px;
+  padding: 10px 20px;
+  font-size: 0.95em;
 }
 
 /* Progress Bar */
@@ -452,6 +454,36 @@ h1 {
   box-shadow: 2px 2px 0 #333;
 }
 
+.btn-alternative {
+  background: #fff5f8;
+  color: #333;
+  border: 2px solid #333;
+  padding: 5px 12px;
+  font-size: 0.75em;
+  border-radius: 0;
+  cursor: pointer;
+  transition: transform 0.1s;
+  font-weight: 600;
+  font-family: "Pixelify Sans", sans-serif;
+  text-transform: none;
+  letter-spacing: 0.3px;
+  box-shadow: 2px 2px 0 #333;
+  margin: 10px auto;
+  display: block;
+  width: fit-content;
+}
+
+.btn-alternative:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 #333;
+  background: #ffe5f0;
+}
+
+.btn-alternative:active {
+  transform: translate(3px, 3px);
+  box-shadow: 0 0 0 #333;
+}
+
 .share-section {
   margin-top: 25px;
   padding-top: 20px;
@@ -512,8 +544,15 @@ h1 {
 
   .results-buttons .btn-primary,
   .results-buttons .btn-secondary {
-    min-width: 120px;
-    font-size: 1em;
-    padding: 10px 20px;
+    min-width: 100px;
+    max-width: 140px;
+    font-size: 0.85em;
+    padding: 8px 16px;
+  }
+
+  .btn-alternative {
+    font-size: 0.7em;
+    padding: 4px 10px;
+    margin: 8px auto;
   }
 }
